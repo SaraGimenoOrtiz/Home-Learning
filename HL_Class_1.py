@@ -13,10 +13,11 @@ user_name=input("What is your name?")
 
 Number=int(input("Guess my number between 1 and 10.Try : "))
 
-if Number==5:
-    print("Correct")
-else:
+while Number!=5:
     print ("You ve lost")
+    Number=int(input("Guess my number between 1 and 10.Try : "))
+
+print("Correct")
 
 #TASK 2
 Number_2=int(input("Write a number between 1 and 100: "))
@@ -54,10 +55,17 @@ while final_cost>1000:
 #TASK 5
 num_1=int(input("Introduce el primer numero: "))
 num_2=int(input("Introduce el segundo numero: "))
-option=(input("Enter a if you want to add, enter b if you want to subtract"))
+option=(input("Enter a if you want to add, enter b if you want to subtract, Enter c if you want to divide, enter d if you want to multiple or enter e if you want to elevate:  "))
+
 if option=="a":
     print("La suma de" ,num_1, "+" ,num_2, "es" ,num_1+num_2)
 elif option=="b":
     print("La resta de" ,num_1, "-" ,num_2, "es" ,num_1-num_2)
+elif option=="c":
+    print("La división de" ,num_1, "/" ,num_2, "es" ,num_1/num_2)
+elif option=="d":
+    print("La multiplicacion de" ,num_1, "*" ,num_2, "es" ,num_1*num_2)
+elif option=="e":
+    print(num_1, "^" ,num_2, "es" ,num_1**num_2)
 else:
     print("opcion no valida")
