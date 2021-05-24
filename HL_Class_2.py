@@ -36,16 +36,20 @@ else:
 
 # TASK 2
 
-initial_cost=2000
-final_cost=2000 #only for entering in the loop
-years=0
-while (final_cost>1000):
+def cost_depreciation(inp_initial_cost):
+    final_cost=2000 #only for entering in the loop
+    years=0
+    while (final_cost>1000):
     
-    years=years+1
-    final_cost=initial_cost-0.1*initial_cost
-    initial_cost=final_cost
-    print("The motorbike cost is ", round(final_cost,2), "€ en el año ", years," de su compra")
+        years=years+1
+        final_cost=inp_initial_cost-0.1*inp_initial_cost
+        inp_initial_cost=final_cost
+        output=final_cost
+    print("The motorbike cost is ", round(output,2), "€ en el año ", years," de su compra")
 
+initial_cost=2000
+
+cost_depreciation(initial_cost)
 
 #TASK 3
 
